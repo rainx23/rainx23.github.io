@@ -167,8 +167,8 @@ $(function () {
             }
     });
 
-    // 初始化加载 tooltipped.
-    $('.tooltipped').tooltip();
+    // 初始化加载 tooltipped. 设置鼠标悬浮在图标上是否提示文字内容
+    // $('.tooltipped').tooltip();
 });
 /* 深色模式按钮设置 */
 if (localStorage.getItem("dark") === "1") {

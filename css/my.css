@@ -83,3 +83,39 @@
     display: initial;
     vertical-align: middle;
 }
+
+/* 滚动条样式一 */ 
+::-webkit-scrollbar {
+  width: 0.4rem;
+  height: 0.25rem;
+  background-image: linear-gradient(135deg, #1DE9B6 0%, rgba(8, 196, 219, 0.5) 72%, rgba(0, 182, 234, 0.3) 100%);
+}
+
+
+/* 滚动条样式二  delete lock*/
+lock::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 11px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+  }
+lock::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius   : 10px;
+  background-color: skyblue;
+  background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent
+  );
+  }
+lock::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : #ededed;
+  border-radius: 10px;
+  }
