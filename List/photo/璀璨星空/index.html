@@ -823,9 +823,9 @@ $(function () {
 </script>
 
 <!-- 深色模式按钮 -->
-<a onclick="switchNightMode()" id="sma" title="模式切换">
+<!--	<a onclick="switchNightMode()" id="sma" title="模式切换">
     <i class="fa fa-moon" id="nightMode" aria-hidden="true"></i>
-</a>
+</a> -->
 <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -874,6 +874,47 @@ $(function () {
 
 
 
+<!-- 黑白主题切换 -->
+<!-- 白天和黑夜主题 -->
+<div class="sum-moon-box">
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+    <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
+  </a>
+</div>
+
+<script>
+  function switchNightMode() {
+    $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+      setTimeout(function () {
+        $('body').hasClass('DarkMode') 
+        ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+        : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+          
+        setTimeout(function () {
+          $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+            $(this).remove()
+          })
+        }, 2e3)
+      })
+  }
+</script>
+<script>
+    /* 模式判断 */
+    if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+    } else {
+        document.body.classList.remove('DarkMode');
+        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+    }
+</script>
+<div class="stars-con">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>  
+    </div>
+
+
 <script src="/libs/materialize/materialize.min.js"></script>
 <script src="/libs/masonry/masonry.pkgd.min.js"></script>
 <script src="/libs/aos/aos.js"></script>
@@ -901,14 +942,6 @@ $(function () {
 
 
 <!-- 雪花特效 -->
-
-    <script type="text/javascript">
-        // 只在桌面版网页启用特效
-        var windowWidth = $(window).width();
-        if (windowWidth > 768) {
-            document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
-        }
-    </script>
 
 
 <!--动态线条背景特效-->

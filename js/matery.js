@@ -185,6 +185,7 @@ if (localStorage.getItem("dark") === "1") {
     }
 }
 
+
 /*提醒开启功能*/
 setTimeout(function () {
     if (
@@ -198,21 +199,6 @@ setTimeout(function () {
     }
 }, 2200);
 
-/* 深色模式设置*/
-function switchNightMode() {
-    var body = document.body;
-    if (body.classList.contains("dark")) {
-        document.body.classList.remove("dark");
-        localStorage.setItem("dark", "0");
-        $("#nightMode").removeClass("fa-lightbulb").addClass("fa-moon");
-        return;
-    } else {
-        document.body.classList.add("dark");
-        localStorage.setItem("dark", "1");
-        $("#nightMode").removeClass("fa-moon").addClass("fa-lightbulb");
-        return;
-    }
-}
 
 /*friends-link*/
 $('#friends-link').masonry({
