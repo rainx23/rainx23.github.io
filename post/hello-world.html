@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <link rel="stylesheet" type="text/css" href="/css/dark.css">
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+    <!-- 黑夜模式样式 css -->
+    <link rel="stylesheet" type="text/css" href="/css/day-night.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
@@ -63,23 +65,53 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/tags" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>标签</span>
+      <span>归档</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
+    <ul class="sub-nav menus_item_child ">
       
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      <li>
+        <a href="/census">
+          
+          <i class="fas fa-layer-group" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>统计</span>
+        </a>
+      </li>
       
-      <span>分类</span>
-    </a>
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-paper-plane" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>时轴</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tag" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -123,17 +155,6 @@
       </li>
       
     </ul>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/archives" class="waves-effect waves-light">
-      
-      <i class="fas fa-archive" style="zoom: 0.6;"></i>
-      
-      <span>归档</span>
-    </a>
     
   </li>
   
@@ -207,23 +228,56 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/tags" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-tags"></i>
+				<i class="fa-fw fas fa-archive"></i>
 			
-			标签
+			归档
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			分类
-		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/census " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-layer-group" style="position: absolute;left:50px" ></i>
+			      
+		          <span>统计</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-paper-plane" style="position: absolute;left:50px" ></i>
+			      
+		          <span>时轴</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tag" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -269,17 +323,6 @@
                 </li>
               
             </ul>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/archives" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-archive"></i>
-			
-			归档
-		</a>
           
         </li>
         
@@ -1048,37 +1091,52 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/post/hello-world.html">
+                <a href="/post/BlogOpen.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="LuckyBlog开源搭建教程">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">LuckyBlog开源搭建教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            之前在B站上发布了个人博客的视频，播放量也破千了，有网友私聊也想要搭建一个这样的博客。经过一段时间的准备，现将博客LuckyBlog的源代码公布出来，大家只需要根据以下的步骤，即可快速搭建一个漂亮且完善的博客。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Rainx
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
+                                    博客篇
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo-blog-lucky/">
+                        <span class="chip bg-color">hexo-blog-lucky</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">博客搭建教程</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1220,8 +1278,13 @@
                 <span id="year">2022</span>
             
             <a href="/about" target="_blank">Rainx</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <!-- |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a> -->
+            |
+            <span id="micp">
+                <img src="/medias/micp.png" style="vertical-align:text-bottom">
+                <a href="https://icp.gov.moe/?keyword=20221120" target="_blank">萌ICP备20221120号</a>
+            </span>
             <br>
             
             
@@ -1494,12 +1557,44 @@ $(function () {
 <!-- 黑白主题切换 -->
 <!-- 白天和黑夜主题 -->
 <div class="sum-moon-box">
-  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="切换主题" >
+  <a class="btn-floating btn-large waves-effect waves-light" onclick="switchNightMode()" title="模式切换" >
     <i id="sum-moon-icon" class="fas fa-sun" style="width:48px; height:48px; font-size: 28px;"></i>
   </a>
 </div>
 
 <script>
+
+  // 在这里修改 isDark 变量过期的时间
+  var isDarkLiveHours = 6;
+
+  function setCookie(name, value, hoursToLive) {
+    var cookie = name + "=" + encodeURIComponent(value);
+    
+    if (typeof hoursToLive === "number") {
+      cookie += ";path=/;max-age=" + (hoursToLive*60*60);
+    }
+
+    document.cookie = cookie;
+  }
+
+  function getCookie(name) {
+    // 拆分 cookie 字符串
+    var cookieArr = document.cookie.split(";");
+   
+    // 循环遍历数组元素
+    for(var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+       
+        /* 删除 cookie 名称开头的空白并将其与给定字符串进行比较 */
+        if(name == cookiePair[0].trim()) {
+            // 解码cookie值并返回
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+    // 如果未找到，则返回null
+    return null;
+  }
+
   function switchNightMode() {
     $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
       setTimeout(function () {
@@ -1514,17 +1609,42 @@ $(function () {
         }, 2e3)
       })
   }
-</script>
-<script>
-    /* 模式判断 */
-    if (localStorage.getItem('isDark') === '1') {
-        document.body.classList.add('DarkMode');
-        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')
+
+  //黑夜模式自动开启功能（首次加载）
+  setTimeout(function () {
+    if (localStorage.getItem('isDark') == null) {
+      if ((new Date().getHours() >= 22 || new Date().getHours() < 6) && !$('body').hasClass('DarkMode')) {
+        $('body').addClass('DarkMode');
+        localStorage.setItem('isDark', '1');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon');
+      }
     } else {
+      /* 模式判断 */
+      if (localStorage.getItem('isDark') === '1') {
+        document.body.classList.add('DarkMode');
+        $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon');
+      } else {
         document.body.classList.remove('DarkMode');
-        $('#sum-moon-icon').removeleClass("fa-sun").addClass('fa-moon')
+        $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon');
+      }
     }
+  }, 0);
+
+    /*提醒开启功能*/
+  setTimeout(function () {
+      if (
+          (new Date().getHours() >= 19 || new Date().getHours() < 7) &&
+          !$("body").hasClass("DarkMode")
+      ) {
+          let toastHTML =
+              '<span style="color:#97b8b2;border-radius: 10px;>' +
+              '<i class="fa fa-bell" aria-hidden="true"></i>晚上使用深色模式阅读更好哦。(ﾟ▽ﾟ)/</span>';
+          M.toast({ html: toastHTML });
+      }
+  }, 2200);
 </script>
+
+
 <div class="stars-con">
       <div id="stars"></div>
       <div id="stars2"></div>
