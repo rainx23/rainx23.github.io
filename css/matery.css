@@ -242,7 +242,7 @@ mark {
 
 .bg-color {
     background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
-    opacity: 0.8;    /*透明效果 值范围 0~1，看情况自己修改 */
+    opacity: 0.7;    /*透明效果 值范围 0~1，看情况自己修改 */
 }
 
 .text-color {
@@ -576,7 +576,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
@@ -2257,6 +2257,7 @@ body.dark img, body.dark strong {
 
 .title {
     margin-bottom: 0rem !important;
+	font-family:"Times New Roman",Georgia,Serif;
 }
 
 .card {
