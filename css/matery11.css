@@ -6,6 +6,7 @@
     }
 }
 
+
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
@@ -101,7 +102,7 @@ blockquote {
 }
 
 pre {
-    padding: 2rem 1rem 1rem 1rem !important;
+    padding: 2rem 1rem 1rem 3rem !important;
     border-radius: 0.35rem;
     tab-size: 4;
 }
@@ -240,9 +241,11 @@ mark {
     margin-bottom: 0;
 }
 
+/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */
 .bg-color {
-    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
-    opacity: 0.8;    /*透明效果 值范围 0~1，看情况自己修改 */
+	/*background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);*/
+	background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+	opacity: 0.8;    /*透明效果 值范围 0~1，看情况自己修改 */
 }
 
 .text-color {
@@ -270,8 +273,6 @@ mark {
     margin-top: -64px;
 }
 
-
-
 header .side-nav {
     width: 240px;
     z-index: 999;
@@ -281,8 +282,6 @@ header .side-nav {
 nav {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 7px 10px 0 rgba(0, 0, 0, 0.12);
 }
-
-
 
 header .nav-transparent {
     background-color: transparent !important;
@@ -580,7 +579,6 @@ header .go-back i {
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
-
 }
 
 .bg-cover .description {
@@ -596,12 +594,103 @@ header .go-back i {
     font-weight: 400;
 }
 
+/* 首页背景蒙版特效 */
+/*.bg-cover:after {
+    -webkit-animation: rainbow 60s infinite;
+    animation: rainbow 60s infinite;
+}*/
+
+
 @-webkit-keyframes rainbow {
 
+    0%,
+    100% {
+        background: rgba(156, 39, 176, 0.75);
+        background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+    }
+
+    16% {
+        background: rgba(132, 13, 121, 0.75);
+        background: linear-gradient(45deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
+    }
+
+    32% {
+        background: rgba(239, 83, 80, 0.75);
+        background: linear-gradient(45deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
+    }
+
+    48% {
+        background: rgba(255, 87, 34, 0.75);
+        background: linear-gradient(45deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
+    }
+
+    64% {
+        background: rgba(255, 160, 0, 0.75);
+        background: linear-gradient(45deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 112, 66, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
+    }
+
+    80% {
+        background: rgba(233, 30, 99, 0.75);
+        background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+    }
 }
 
 @keyframes rainbow {
 
+    0%,
+    100% {
+        background: rgba(156, 39, 176, 0.75);
+        background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+    }
+
+    16% {
+        background: rgba(132, 13, 121, 0.75);
+        background: linear-gradient(45deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(132, 13, 121, 0.75) 0%, rgba(132, 13, 121, 0.65) 100%);
+    }
+
+    32% {
+        background: rgba(239, 83, 80, 0.75);
+        background: linear-gradient(45deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(239, 83, 80, 0.75) 0%, rgba(239, 83, 80, 0.65) 100%);
+    }
+
+    48% {
+        background: rgba(255, 87, 34, 0.75);
+        background: linear-gradient(45deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(255, 87, 34, 0.75) 0%, rgba(255, 87, 34, 0.65) 100%);
+    }
+
+    64% {
+        background: rgba(255, 160, 0, 0.75);
+        background: linear-gradient(45deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 112, 66, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
+    }
+
+    80% {
+        background: rgba(233, 30, 99, 0.75);
+        background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+        background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+        background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
+    }
 }
 
 .index-card {
@@ -1765,7 +1854,6 @@ footer .copy-right {
     color: #dbdbdb;
 }
 
-
 /*搜索层样式*/
 #searchIcon {
     font-size: 1.2rem;
@@ -1826,7 +1914,36 @@ p.search-result-summary{
     margin-bottom: 0;
     z-index: 998;
 }
+/* 深色模式按钮设置 */
+#sma {
+    background: #000;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    display: block;
+    position: fixed;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 76px;
+    padding-top: 14px;
+    margin-bottom: 0;
+    z-index: 998;
+    cursor: pointer;
+}
 
+#sma .fa-moon {
+    font-size: 1.58rem !important;
+}
+#sma .fa-lightbulb {
+    font-size: 1.5rem !important;
+}
+
+.fa-moon:before {
+    content: "\f186";
+}
+.fa-comments:before {
+    content: "\f086";
+}
 .top-scroll .btn-floating {
     background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
     width: 48px;
@@ -1911,8 +2028,7 @@ p.search-result-summary{
     /* use this value to count block height */
     line-height: 1.5em;
     /* max-height = line-height (1.2) * lines max number (3) */
-    max-height: 3em;
-    /* 原值4.5em三行,改为固定两行显示为3em */
+    max-height: 4.5em;
     /* fix problem when last visible word doesn't adjoin right side  */
     text-align: justify;
     /* place for '...' */
@@ -2064,107 +2180,6 @@ p.search-result-summary{
     padding: 0;
     margin: 0;
 }
-
-/* 深色模式按钮设置 */
-#sma {
-    background: #000;
-    width: 48px;
-    height: 47px;
-    display: block;
-    position: fixed;
-    border-radius: 50%;
-    right: 15px;
-    bottom: 137px;
-    padding-top: 15px;
-    margin-bottom: 0;
-    z-index: 998;
-    cursor: pointer;
-}
-
-#sma .fa-moon-o {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    font-size: 1.48rem!important;
-}
-#sma .fa-lightbulb  {
-    position: absolute;
-    right: 16px;
-    bottom: 12px;
-    font-size: 1.5rem!important;
-}
-
-.fa-moon-o:before {
-    content: "\f186";
-}
-.fa-comments:before {
-    content: "\f086";
-}
-
-/* 深色模式设置 */
-/* 字体颜色变灰白色 */
-body.dark .fas,
-body.dark .sub-nav li span,
-body.dark .publish-date,
-body.dark .title,
-body.dark .row .text,
-body.dark article .article-content .summary,
-body.dark .card .card-image .card-title,
-body.dark .fa-moon-o:before,
-body.dark .fa-lightbulb:before,
-body.dark article .article-tags .chip,
-body.dark .chip-container .tag-title,
-body.dark div.jqcloud a,
-body.dark .friends-container .tag-title,
-body.dark .frind-ship .title h1,
-body.dark .card .card-content p,
-body.dark .v[data-class=v] .vcount,
-body.dark .v[data-class=v] .vcount .vnum,
-body.dark pre code,
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4,
-body.dark h5,
-body.dark h6,
-body.dark li,
-body.dark p,
-body.dark header .side-nav .mobile-head .logo-name,
-body.dark header .side-nav .mobile-head .logo-desc,
-body.dark header .side-nav .menu-list a,
-body.dark .bg-cover .post-title,
-body.dark a
-{
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* 背景颜色变灰色 */
-body.dark .card,
-body.dark .sub-nav,
-body.dark #toc-content,
-body.dark .toc-title,
-body.dark .toc-list,
-body.dark .block-with-text:after
-{
-    background-color: #282c34;
-}
-
-/* 背景颜色变黑色 */
-body.dark,
-body.dark .v[data-class=v] .vcount,
-body.dark #rewardModal .modal-content,
-body.dark .modal,
-body.dark header .side-nav,
-body.dark header .side-nav .menu-list .m-nav-show
-{
-    background-color: #12121c;
-}
-
-/* 改变透明度 */
-body.dark .aplayer{background: #2f3742!important;}
-body.dark img, body.dark strong {
-    filter: brightness(.7);
-}
 /*friends*/
 .friends-container {
     margin-top: -100px;
@@ -2256,7 +2271,7 @@ body.dark img, body.dark strong {
 }
 
 .title {
-    margin-bottom: 0rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .card {
