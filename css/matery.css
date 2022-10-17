@@ -241,8 +241,9 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
-    opacity: 0.7;    /*透明效果 值范围 0~1，看情况自己修改 */
+    /* background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%); */
+    background-image: linear-gradient(-45deg, #1DE9B6 0%, rgba(8, 196, 219, 0.5) 72%, rgba(0, 182, 234, 0.3) 100%);
+    opacity: 1;    /*透明效果 值范围 0~1，看情况自己修改 */
 }
 
 .text-color {
@@ -297,7 +298,7 @@ header nav .brand-span {
 header .brand-logo .logo-img {
     height: 45px;
     vertical-align: middle;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
 }
 
 header .brand-logo .logo-span {
@@ -349,9 +350,10 @@ header .side-nav .menu-list a {
     color: #34495e !important;
 }
 
+/* 调节手机模式下菜单栏大小 font-size */
 .mobile-menu-list a i {
     margin-left: 8px !important;
-    font-size: 1.16rem;
+    font-size: 1.25rem;
     color: #34495e !important;
 }
 
@@ -372,6 +374,7 @@ header .side-nav .social-link {
     padding: 0 12px;
 }
 
+/* 修改"开始阅读"按钮行高 */
 .cover-btns {
     position: relative;
     top: 10vh;
@@ -575,9 +578,10 @@ header .go-back i {
     z-index: 2;
 }
 
+/* 正常模式下副标题大小 */
 .bg-cover .title {
     font-size: 5rem;
-    line-height: 1.2em;
+    line-height: normal;
     margin-bottom: 20px;
     position: relative;
 
@@ -604,8 +608,9 @@ header .go-back i {
 
 }
 
+/* 修改首页背景图与卡片间距值"margin-top" */
 .index-card {
-    margin-top: -10px;
+    margin-top: -45px;
     padding-top: 20px;
 }
 
@@ -1559,7 +1564,16 @@ thead {
     max-width: 160px;
     width: 100%;
     margin: 0 auto;
-    transform: translate3d(0, -65%, 0);
+    /* transform: translate3d(0, -165%, 0); */
+    transform: translateY(-65%) ;
+}
+.profile .avatar-img:hover {
+    transition: all 1s;   
+    transform: translateY(-65%) rotate(360deg);
+    -webkit-transform:translateY(-65%) rotate(360deg);
+    -moz-transform:translateY(-65%) rotate(360deg);
+    -o-transform:translateY(-65%) rotate(360deg);
+    -ms-transform:translateY(-65%) rotate(360deg);
 }
 
 .profile .author {
@@ -2101,70 +2115,6 @@ p.search-result-summary{
     content: "\f086";
 }
 
-/* 深色模式设置 */
-/* 字体颜色变灰白色 */
-body.dark .fas,
-body.dark .sub-nav li span,
-body.dark .publish-date,
-body.dark .title,
-body.dark .row .text,
-body.dark article .article-content .summary,
-body.dark .card .card-image .card-title,
-body.dark .fa-moon-o:before,
-body.dark .fa-lightbulb:before,
-body.dark article .article-tags .chip,
-body.dark .chip-container .tag-title,
-body.dark div.jqcloud a,
-body.dark .friends-container .tag-title,
-body.dark .frind-ship .title h1,
-body.dark .card .card-content p,
-body.dark .v[data-class=v] .vcount,
-body.dark .v[data-class=v] .vcount .vnum,
-body.dark pre code,
-body.dark h1,
-body.dark h2,
-body.dark h3,
-body.dark h4,
-body.dark h5,
-body.dark h6,
-body.dark li,
-body.dark p,
-body.dark header .side-nav .mobile-head .logo-name,
-body.dark header .side-nav .mobile-head .logo-desc,
-body.dark header .side-nav .menu-list a,
-body.dark .bg-cover .post-title,
-body.dark a
-{
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* 背景颜色变灰色 */
-body.dark .card,
-body.dark .sub-nav,
-body.dark #toc-content,
-body.dark .toc-title,
-body.dark .toc-list,
-body.dark .block-with-text:after
-{
-    background-color: #282c34;
-}
-
-/* 背景颜色变黑色 */
-body.dark,
-body.dark .v[data-class=v] .vcount,
-body.dark #rewardModal .modal-content,
-body.dark .modal,
-body.dark header .side-nav,
-body.dark header .side-nav .menu-list .m-nav-show
-{
-    background-color: #12121c;
-}
-
-/* 改变透明度 */
-body.dark .aplayer{background: #2f3742!important;}
-body.dark img, body.dark strong {
-    filter: brightness(.7);
-}
 /*friends*/
 .friends-container {
     margin-top: -100px;
@@ -2257,9 +2207,8 @@ body.dark img, body.dark strong {
 
 .title {
     margin-bottom: 0rem !important;
-	font-family:"Times New Roman",Georgia,Serif;
-}
-
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+}    
 .card {
     margin: 3rem 0 1rem 0 !important;
 }

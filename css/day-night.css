@@ -1,20 +1,22 @@
+/* 深色模式设置 */
 /* 字体颜色变灰白色 */
 body.DarkMode .fas,
+body.DarkMode .sub-nav li span,
+body.DarkMode .publish-date,
 body.DarkMode .title,
 body.DarkMode .row .text,
 body.DarkMode article .article-content .summary,
 body.DarkMode .card .card-image .card-title,
 body.DarkMode .fa-moon-o:before,
-body.DarkMode .fa-lightbulb-o:before,
+body.DarkMode .fa-lightbulb:before,
 body.DarkMode article .article-tags .chip,
 body.DarkMode .chip-container .tag-title,
 body.DarkMode div.jqcloud a,
 body.DarkMode .friends-container .tag-title,
 body.DarkMode .frind-ship .title h1,
 body.DarkMode .card .card-content p,
-body.DarkMode .card .card-content .dss,
-body.DarkMode .v[data-class='v'] .vcount,
-body.DarkMode .v[data-class='v'] .vcount .vnum,
+body.DarkMode .v[data-class=v] .vcount,
+body.DarkMode .v[data-class=v] .vcount .vnum,
 body.DarkMode pre code,
 body.DarkMode h1,
 body.DarkMode h2,
@@ -23,31 +25,38 @@ body.DarkMode h4,
 body.DarkMode h5,
 body.DarkMode h6,
 body.DarkMode li,
+body.DarkMode .logo-img,
 body.DarkMode p,
+body.DarkMode .tooltipped,
+body.DarkMode #subtitle,
 body.DarkMode header .side-nav .mobile-head .logo-name,
 body.DarkMode header .side-nav .mobile-head .logo-desc,
 body.DarkMode header .side-nav .menu-list a,
 body.DarkMode .bg-cover .post-title,
-body.DarkMode.read .bg-cover .description,
-body.DarkMode input,
-body.DarkMode #contact .form-inline .form-group,
-body.DarkMode #vcomments textarea {
+body.DarkMode a
+{
     color: rgba(255, 255, 255, 0.6);
 }
 
 /* 背景颜色变灰色 */
 body.DarkMode .card,
-body.DarkMode .block-with-text:after {
+body.DarkMode .sub-nav,
+body.DarkMode #toc-content,
+body.DarkMode .toc-title,
+body.DarkMode .toc-list,
+body.DarkMode .block-with-text:after
+{
     background-color: #282c34;
 }
 
 /* 背景颜色变黑色 */
 body.DarkMode,
-body.DarkMode .v[data-class='v'] .vcount,
+body.DarkMode .v[data-class=v] .vcount,
 body.DarkMode #rewardModal .modal-content,
 body.DarkMode .modal,
 body.DarkMode header .side-nav,
-body.DarkMode header .side-nav .menu-list .m-nav-show {
+body.DarkMode header .side-nav .menu-list .m-nav-show
+{
     background-color: #12121c;
 }
 
@@ -58,12 +67,12 @@ body.DarkMode .aplayer {
 
 body.DarkMode img,
 body.DarkMode strong {
-    filter: brightness(0.7);
+    filter: brightness(0.8);
 }
 
 /*toc目录滤镜*/
 body.DarkMode .toc-widget {
-    filter: invert(0.8);
+    filter: invert(.7);
 }
 
 body.DarkMode .toc-widget .toc-list-item {
@@ -168,7 +177,7 @@ body.DarkMode ::-ms-input-placeholder { /* Microsoft Edge */
     border-radius: 50%;
     position: fixed;
     right: 15px;
-    bottom: 90px;      /*设置图标位置，行高 */
+    bottom: 75px;      /*设置图标位置，行高 */
     margin-bottom: 0;
     z-index: 900;
 }

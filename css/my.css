@@ -5,15 +5,21 @@
 @media only screen and (max-width: 601px) {
     .bg-cover .title {
         font-size: 50px;
+        margin-bottom: 20px;
+        position: relative;
+        line-height: 1.2em;
 		font-family: "Times New Roman",Georgia,Serif;
+        /* font-family: Georgia, -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif; */
     }
-
+    #subtitle {
+        font-size: 1.16rem;
+    }
 }
 
 /* 修改博客标题的字体大小 */
 @media only screen and (max-width: 601px) {
     header .brand-logo .logo-span {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -59,7 +65,7 @@
     font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 .poem-wrap p:nth-of-type(2) {
-    font-size: 18px;
+    font-size: 19px;
     margin: 15px auto;
 }
 .bozhushuo {
@@ -121,3 +127,10 @@ lock::-webkit-scrollbar-track {
   background   : #ededed;
   border-radius: 10px;
   }
+
+  /* 底部访问统计和人数一直显示 */
+#busuanzi_container_site_pv,
+#busuanzi_value_site_pv,
+#busuanzi_container_site_uv{
+   display: inline !important;
+}
