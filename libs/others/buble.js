@@ -1,7 +1,7 @@
 // 上升的气泡
 function buble () {
   $('.carousel-item, .pd-header').circleMagic({
-    radius: 10,
+    radius: 15,
     density: .2,
     color: 'rgba(255,255,255,.4)',
     clearOffset: 0.99
@@ -12,7 +12,7 @@ function buble () {
       i = [],
       d = p.extend({
         color: "rgba(255,0,0,.5)",
-        radius: 10,
+        radius: 15,
         density: .3,
         clearOffset: .2
       }, t),
@@ -46,8 +46,8 @@ function buble () {
           var t = document.createElement("canvas");
           t.id = "canvas";
           t.style.top = 0;
-          t.style.left = 0
-          t.style.right = 0
+          t.style.left = 0;
+          t.style.right = 0;
           t.style.zIndex = 0;
           t.style.position = "absolute";
 
