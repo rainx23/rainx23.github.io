@@ -58,6 +58,35 @@
     
     
     <entry>
+      <title>Hexo Matery主题中添加网页标题动态切换效果</title>
+      <link href="/post/2021-08-27-Hexo-Matery%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E6%A0%87%E9%A2%98%E5%8A%A8%E6%80%81%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C.html"/>
+      <url>/post/2021-08-27-Hexo-Matery%E4%B8%BB%E9%A2%98%E4%B8%AD%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E6%A0%87%E9%A2%98%E5%8A%A8%E6%80%81%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="0x001-前言"><a href="#0x001-前言" class="headerlink" title="0x001 前言"></a>0x001 前言</h2><hr><p>&amp;nbsp;&amp;emsp;主要效果是当用户离开站点相关页面时，网页标题也会随之改变，同时也可以改变网站图标，具体标题内容和网站图标可以根据自己喜好自定义；当用户重新回到站点时才恢复到正常标题，从而达到动态切换的效果。</p><h2 id="0x002-使用方法"><a href="#0x002-使用方法" class="headerlink" title="0x002 使用方法"></a>0x002 使用方法</h2><hr><p>在<code>themes\matery\source\js</code>下新建<code>title.js</code></p><h2 id="0x003-添加代码"><a href="#0x003-添加代码" class="headerlink" title="0x003 添加代码"></a>0x003 添加代码</h2><hr><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 网站标题动态效果 <span class="token operator">--</span><span class="token operator">></span><span class="token keyword">var</span> OriginTitle <span class="token operator">=</span> document<span class="token punctuation">.</span>title<span class="token punctuation">;</span><span class="token keyword">var</span> titleTime<span class="token punctuation">;</span>document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'visibilitychange'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>document<span class="token punctuation">.</span>hidden<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'[rel="icon"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">,</span> <span class="token string">"/img/xxx.ico"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'╭(°A°`)╮ 页面崩溃啦 ~'</span><span class="token punctuation">;</span>        <span class="token function">clearTimeout</span><span class="token punctuation">(</span>titleTime<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span>    <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'[rel="icon"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">,</span> <span class="token string">"/favicon.ico"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        document<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'(ฅ>ω&lt;*ฅ) 噫又好了~'</span> <span class="token operator">+</span> OriginTitle<span class="token punctuation">;</span>        titleTime <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>            document<span class="token punctuation">.</span>title <span class="token operator">=</span> OriginTitle<span class="token punctuation">;</span>        <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="0x004-引用代码"><a href="#0x004-引用代码" class="headerlink" title="0x004 引用代码"></a>0x004 引用代码</h2><hr><p>在<code>themes\matery\layoutlayout.ejs</code>中添加一下代码：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>崩溃欺骗<span class="token operator">--</span><span class="token operator">></span><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"/js/title.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客篇 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Github </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LuckyBlog开源搭建教程</title>
       <link href="/post/BlogOpen.html"/>
       <url>/post/BlogOpen.html</url>
@@ -67,7 +96,7 @@
       
       <categories>
           
-          <category> 博客篇 </category>
+          <category> 设计篇 </category>
           
       </categories>
       
@@ -150,7 +179,7 @@
       
       <categories>
           
-          <category> 博客篇 </category>
+          <category> 网络篇 </category>
           
       </categories>
       
